@@ -1,0 +1,55 @@
+{
+  "name": "repeat-until-async",
+  "version": "1.0.0",
+  "description": "Repeat until the predicate returns true and resolves a Promise",
+  "main": "src/repeatUntil.js",
+  "types": "src/index.d.ts",
+  "scripts": {
+    "test": "jest -u --no-cache --config .jestrc",
+    "test:coverage": "jest --coverage --no-cache --config .jestrc",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "codeclimate": "cat ./coverage/lcov.info | codeclimate-test-reporter",
+    "test:report": "npm run coveralls && npm run codeclimate",
+    "validate": "npm run test:coverage",
+    "prepush": "npm run validate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvikraman/repeat-until-async"
+  },
+  "keywords": [
+    "apply",
+    "when",
+    "async",
+    "then",
+    "promise",
+    "wait",
+    "timeout",
+    "interval",
+    "until",
+    "for",
+    "repeat"
+  ],
+  "author": "Vikraman <kidviki@gmail.com>, Shobana Ananadaraj <shobaemail@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devlato/waitUntil/issues"
+  },
+  "homepage": "https://github.com/devlato/waitUntil#readme",
+  "files": [
+    "package.json",
+    "README.md",
+    ".gitignore",
+    "src"
+  ],
+  "devDependencies": {
+    "codeclimate-test-reporter": "0.4.0",
+    "coveralls": "2.11.15",
+    "husky": "0.13.1",
+    "jest": "18.1.0"
+  },
+  "engines": {
+    "node": ">= 4",
+    "npm": ">= 2"
+  }
+}
